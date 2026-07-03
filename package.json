@@ -1,0 +1,20 @@
+{
+  "name": "agency-discovery-os",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "new-client": "node scripts/new-client.js",
+    "validate": "node scripts/validate.js",
+    "check-slides": "node scripts/check-slides.js",
+    "package-client": "node scripts/package-client.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {}
+}
