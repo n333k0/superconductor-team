@@ -1,6 +1,6 @@
 # Competitor Benchmark
 
-Client slug: `client-example`
+Client slug: `smoke-test-003`
 Date: 2026-07-03
 Benchmark owner: Competitor Benchmark Agent
 
@@ -51,7 +51,7 @@ Credible whitespace:
 | --- | --- | --- | --- | --- |
 | Broad all-in-one and visibility claims are overused. | Category-level field service suites | SRC-004 | weak | Use only as a hypothesis until named competitor pages are captured. |
 | Manual workarounds delay purchase decisions. | Status quo buyers in sales notes | SRC-002 | moderate | Safe as an internal sales insight; needs customer evidence for external claims. |
-| Implementation support can reduce adoption anxiety. | Northstar sales conversations and service architecture | SRC-002, outputs/client-example/service-architecture.md | moderate | Safe as a strategic implication, not as a quantified outcome. |
+| Implementation support can reduce adoption anxiety. | Northstar sales conversations and service architecture | SRC-002, outputs/smoke-test-003/service-architecture.md | moderate | Safe as a strategic implication, not as a quantified outcome. |
 
 ## Positioning Implications
 

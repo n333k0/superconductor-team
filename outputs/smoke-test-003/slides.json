@@ -1,9 +1,9 @@
 {
-  "client_slug": "client-example",
+  "client_slug": "smoke-test-003",
   "deck_title": "Northstar Fieldworks Strategy Direction",
   "version": "0.1.0",
   "created_at": "2026-07-03",
-  "source_outline": "outputs/client-example/strategy-deck-outline.md",
+  "source_outline": "outputs/smoke-test-003/strategy-deck-outline.md",
   "strategy_summary": "Northstar should compete on field execution confidence by helping enterprise operations leaders reduce coordination risk across distributed teams.",
   "slides": [
     {
@@ -30,7 +30,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/strategy-synthesis.md"
+        "outputs/smoke-test-003/strategy-synthesis.md"
       ],
       "visual_direction": "Use a clean executive opener with a field-to-customer-to-executive operating system motif.",
       "speaker_notes": "Open with the strategic choice leadership is being asked to approve.",
@@ -70,8 +70,8 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/discovery-brief.md",
-        "outputs/client-example/competitor-benchmark.md"
+        "outputs/smoke-test-003/discovery-brief.md",
+        "outputs/smoke-test-003/competitor-benchmark.md"
       ],
       "visual_direction": "Before/after contrast with restrained status colors.",
       "speaker_notes": "Explain why clearer positioning is commercially necessary.",
@@ -128,7 +128,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/competitor-benchmark.md"
+        "outputs/smoke-test-003/competitor-benchmark.md"
       ],
       "visual_direction": "Use a claim cluster map that makes sameness visible.",
       "speaker_notes": "Set up the need for a sharper strategic territory.",
@@ -156,7 +156,7 @@
       ],
       "evidence_refs": [
         "SRC-002",
-        "outputs/client-example/competitor-benchmark.md"
+        "outputs/smoke-test-003/competitor-benchmark.md"
       ],
       "visual_direction": "Use a risk balance diagram comparing manual pain against implementation risk.",
       "speaker_notes": "Frame adoption assurance as a strategic necessity.",
@@ -186,7 +186,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/strategy-synthesis.md"
+        "outputs/smoke-test-003/strategy-synthesis.md"
       ],
       "visual_direction": "Use a positioning box with for, against, promise, and proof zones.",
       "speaker_notes": "Make the choice crisp enough to approve or challenge.",
@@ -232,8 +232,8 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/discovery-brief.md",
-        "outputs/client-example/strategy-synthesis.md"
+        "outputs/smoke-test-003/discovery-brief.md",
+        "outputs/smoke-test-003/strategy-synthesis.md"
       ],
       "visual_direction": "Use a buyer priority stack with clear primary and secondary roles.",
       "speaker_notes": "Call out the missing vertical data rather than overclaiming.",
@@ -271,7 +271,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/strategy-synthesis.md"
+        "outputs/smoke-test-003/strategy-synthesis.md"
       ],
       "visual_direction": "Use a three-pillar framework with proof requirements beneath each pillar.",
       "speaker_notes": "Show how the story becomes usable by sales and marketing.",
@@ -309,7 +309,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/service-architecture.md"
+        "outputs/smoke-test-003/service-architecture.md"
       ],
       "visual_direction": "Show current-to-recommended architecture shift.",
       "speaker_notes": "Tie packaging to buyer decision confidence.",
@@ -338,7 +338,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/service-architecture.md"
+        "outputs/smoke-test-003/service-architecture.md"
       ],
       "visual_direction": "Use a vertical offer ladder with buyer triggers and proof needs.",
       "speaker_notes": "Make the model simple enough for sales adoption.",
@@ -369,7 +369,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/market-research-summary.md",
+        "outputs/smoke-test-003/market-research-summary.md",
         "SRC-005"
       ],
       "visual_direction": "Use a proof roadmap from qualitative examples to quantified outcomes.",
@@ -414,7 +414,7 @@
         }
       ],
       "evidence_refs": [
-        "outputs/client-example/strategy-synthesis.md"
+        "outputs/smoke-test-003/strategy-synthesis.md"
       ],
       "visual_direction": "Use a concise decision checklist.",
       "speaker_notes": "End with a concrete path to production.",
