@@ -10,6 +10,16 @@ const requiredFiles = [
   "verifier-review.md"
 ];
 
+const reportFiles = [
+  ["Verifier Review", "verifier-review.md", "qa", true],
+  ["Strategy Synthesis", "strategy-synthesis.md", "strategy", true],
+  ["Competitor Benchmark", "competitor-benchmark.md", "landscape", true],
+  ["Product Architecture", "product-architecture.md", "architecture", false],
+  ["Manufacturing Feasibility", "manufacturing-feasibility.md", "manufacturing", false],
+  ["Regulatory / Installation Risks", "regulatory-and-installation-risks.md", "risk", false],
+  ["Client Package Manifest", "client-package-manifest.md", "manifest", true]
+];
+
 function outputsDir() {
   return path.join(process.cwd(), "outputs");
 }
@@ -63,13 +73,20 @@ function readClient(slug) {
   try {
     const slidesPayload = JSON.parse(readText(path.join(baseDir, "slides.json")));
     const slides = Array.isArray(slidesPayload) ? slidesPayload : slidesPayload.slides || [];
+    const reports = reportFiles
+      .map(([title, file, id, alwaysShow]) => ({
+        id,
+        title,
+        file,
+        alwaysShow,
+        content: readText(path.join(baseDir, file))
+      }))
+      .filter((report) => report.alwaysShow || report.content);
 
     return {
       slidesPayload,
       slides,
-      strategySynthesis: readText(path.join(baseDir, "strategy-synthesis.md")),
-      competitorBenchmark: readText(path.join(baseDir, "competitor-benchmark.md")),
-      verifierReview: readText(path.join(baseDir, "verifier-review.md")),
+      reports,
       missing: []
     };
   } catch (error) {
@@ -96,6 +113,15 @@ function Badge({ label, value, tone = "neutral" }) {
       <strong>{valueLabel(value)}</strong>
     </span>
   );
+}
+
+function metricCounts(slides) {
+  return {
+    slides: slides.length,
+    blocked: slides.filter((slide) => slide.readiness_gate === "blocked").length,
+    needsInput: slides.filter((slide) => slide.status === "needs-input").length,
+    clientSafe: slides.filter((slide) => slide.client_safe === true).length
+  };
 }
 
 function confidenceTone(value) {
@@ -180,7 +206,7 @@ function ContentBlock({ block }) {
   const body = block.body;
 
   return (
-    <div className="content-block">
+    <div className={`content-block block-${block.type || "default"}`}>
       {block.heading ? <h4>{block.heading}</h4> : null}
       {Array.isArray(body) && body.every((item) => item && typeof item === "object") ? (
         <div className="mini-table">
@@ -210,8 +236,13 @@ function ContentBlock({ block }) {
 
 function MarkdownPanel({ title, content }) {
   return (
-    <section className="panel text-panel">
-      <div className="section-label">{title}</div>
+    <section className="report-panel text-panel">
+      <div className="report-panel-top">
+        <div>
+          <div className="section-label">{title}</div>
+          <h3>{title}</h3>
+        </div>
+      </div>
       <pre>{content || "No content found."}</pre>
     </section>
   );
@@ -228,13 +259,14 @@ export default async function Page({ searchParams }) {
     client.slidesPayload?.verifier_readiness_summary ||
     client.slidesPayload?.readiness_summary ||
     "No verifier readiness summary found in slides.json.";
+  const counts = client.slides ? metricCounts(client.slides) : {};
 
   return (
     <main>
       <header className="topbar">
         <div>
           <p className="eyebrow">Agency Discovery OS</p>
-          <h1>Client Preview</h1>
+          <h1>{client.slidesPayload?.deck_title || "Client Preview"}</h1>
         </div>
         <form className="client-picker">
           <label htmlFor="client">Client</label>
@@ -250,20 +282,39 @@ export default async function Page({ searchParams }) {
       </header>
 
       {client.error ? (
-        <section className="panel error-panel">
+        <section className="report-panel error-panel">
           <h2>{client.error}</h2>
           {client.missing?.length > 0 ? <p>Missing: {client.missing.join(", ")}</p> : null}
         </section>
       ) : (
         <>
-          <section className="overview">
-            <div>
+          <section className="hero-panel">
+            <div className="hero-copy">
               <p className="eyebrow">Selected Client</p>
               <h2>{selectedSlug}</h2>
+              <p>{client.slidesPayload?.strategy_summary}</p>
             </div>
             <div className="summary-card">
               <div className="section-label">Verifier Readiness Summary</div>
               <p>{readinessSummary}</p>
+            </div>
+            <div className="metric-strip">
+              <div className="metric-card">
+                <span>Slides</span>
+                <strong>{counts.slides}</strong>
+              </div>
+              <div className="metric-card warning-card">
+                <span>Blocked</span>
+                <strong>{counts.blocked}</strong>
+              </div>
+              <div className="metric-card warning-card">
+                <span>Needs Input</span>
+                <strong>{counts.needsInput}</strong>
+              </div>
+              <div className="metric-card">
+                <span>Client Safe</span>
+                <strong>{counts.clientSafe}</strong>
+              </div>
             </div>
           </section>
 
@@ -271,15 +322,29 @@ export default async function Page({ searchParams }) {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Deck</p>
-                <h2>{client.slides.length} Slides</h2>
+                <h2>{client.slides.length} strategic slides</h2>
               </div>
             </div>
 
             <div className="slide-grid">
               {client.slides.map((slide, index) => (
-                <article className="slide-card" key={slide.id || `${slideTitle(slide, index)}-${index}`}>
-                  <div className="slide-number">{String(index + 1).padStart(2, "0")}</div>
+                <article
+                  className={`slide-card ${index % 3 === 0 ? "dark-slide" : ""} ${slide.readiness_gate === "blocked" ? "blocked-slide" : ""}`}
+                  key={slide.id || `${slideTitle(slide, index)}-${index}`}
+                >
+                  <div className="slide-top">
+                    <div>
+                      <div className="section-label">{slide.section || "Slide"}</div>
+                      <div className="slide-number">{slide.id || String(index + 1).padStart(2, "0")}</div>
+                    </div>
+                    <Badge
+                      label="status"
+                      value={slide.status}
+                      tone={readinessTone(slide.status)}
+                    />
+                  </div>
                   <h3>{slideTitle(slide, index)}</h3>
+                  {slide.key_message ? <p className="key-message">{slide.key_message}</p> : null}
                   <div className="badges">
                     <Badge
                       label="readiness_gate"
@@ -299,7 +364,7 @@ export default async function Page({ searchParams }) {
                   </div>
                   {slide.needs_input_reason ? (
                     <div className="warning">
-                      <strong>Needs input</strong>
+                      <strong>{slide.readiness_gate === "blocked" ? "Validation required" : "Needs input"}</strong>
                       <p>{slide.needs_input_reason}</p>
                     </div>
                   ) : null}
@@ -316,15 +381,21 @@ export default async function Page({ searchParams }) {
                       ))}
                     </ul>
                   ) : null}
+                  {Array.isArray(slide.evidence_refs) ? (
+                    <footer className="evidence-footer">
+                      <span>Evidence</span>
+                      <p>{slide.evidence_refs.join(" · ")}</p>
+                    </footer>
+                  ) : null}
                 </article>
               ))}
             </div>
           </section>
 
           <section className="report-grid">
-            <MarkdownPanel title="Verifier Review" content={client.verifierReview} />
-            <MarkdownPanel title="Strategy Synthesis" content={client.strategySynthesis} />
-            <MarkdownPanel title="Competitor Benchmark" content={client.competitorBenchmark} />
+            {client.reports.map((report) => (
+              <MarkdownPanel title={report.title} content={report.content} key={report.id} />
+            ))}
           </section>
         </>
       )}

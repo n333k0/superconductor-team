@@ -38,8 +38,15 @@ if (!fs.existsSync(outputsDir)) {
   }
 
   for (const slug of slugs) {
+    const dir = clientDir(slug);
+    const hasPackageFiles = requiredClientFiles.some((file) => fs.existsSync(path.join(dir, file)));
+
+    if (!hasPackageFiles) {
+      continue;
+    }
+
     for (const file of requiredClientFiles) {
-      if (!fs.existsSync(path.join(clientDir(slug), file))) {
+      if (!fs.existsSync(path.join(dir, file))) {
         errors.push(`outputs/${slug} is missing ${file}`);
       }
     }
