@@ -23,9 +23,9 @@ Decision the deck must unlock:
 
 ## Slide Outline
 
-| Slide ID | Section | Assertion Title | Slide Job | Key Evidence | Visual Approach | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| S01 |  |  |  |  |  | draft |
+| Slide ID | Section | Assertion Title | Slide Job | Decision It Supports | Key Evidence | Visual Approach | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| S01 |  |  |  |  |  |  | draft |
 
 ## Slide Detail
 
@@ -49,8 +49,22 @@ Speaker intent:
 
 Production notes:
 
+Missing inputs:
+
+- 
+
+Verifier risk if unresolved:
+
 ## Open Production Questions
 
 | Slide ID | Question | Owner | Impact |
 | --- | --- | --- | --- |
 |  |  |  |  |
+
+## Outline Quality Check
+
+- Slide titles communicate the argument without body copy:
+- Every slide has one distinct job:
+- Every slide has evidence refs:
+- No slide introduces strategy absent from synthesis:
+- `needs-input` slides identify the missing input and client-readiness impact:

@@ -52,12 +52,15 @@ Actions:
 1. Define the central discovery question.
 2. State working hypotheses.
 3. Assign evidence needs to research, benchmark, architecture, and client clarification.
+4. Give each hypothesis a decision owner, evidence type, and confidence level.
+5. Mark assumptions with stable `ASSUMPTION-###` IDs when they affect strategy choices.
 
 Exit Criteria:
 
 - Discovery question is specific.
 - Hypotheses are testable.
 - Evidence plan is actionable.
+- The next agent can tell which evidence would confirm, change, or reject each hypothesis.
 
 ## Phase 3: Market Research
 
@@ -72,11 +75,14 @@ Actions:
 1. Research market dynamics, buyer context, category language, and opportunity spaces.
 2. Log new sources in `inputs/<client-slug>/source-log.md`.
 3. Convert findings into implications for positioning, offer design, and deck narrative.
+4. Separate sourced findings, observed patterns, implications, and unknowns.
+5. Flag claims that are internal-only, dated, unsourced, or not ready for client presentation.
 
 Exit Criteria:
 
 - Major findings have source labels.
 - Implications are tied to strategy decisions.
+- Each executive finding has at least one evidence reference and a concrete strategy implication.
 
 ## Phase 4: Competitor Benchmarking
 
@@ -89,12 +95,14 @@ Output:
 Actions:
 
 1. Compare direct competitors, substitutes, and status quo.
-2. Identify table stakes, overused claims, proof gaps, and credible whitespace.
-3. Recommend implications for strategy and visual direction.
+2. Include named competitors when public or client-supplied evidence exists; if only category-level evidence exists, mark the benchmark incomplete.
+3. Identify table stakes, overused claims, proof gaps, buying-friction moves, and credible whitespace.
+4. Recommend implications for strategy, offer architecture, deck narrative, and visual direction.
 
 Exit Criteria:
 
 - The benchmark includes strategic vulnerabilities and credible opportunities.
+- The comparison set includes direct competitors, indirect substitutes, and status quo options with evidence references.
 
 ## Phase 5: Product/Service Architecture
 
@@ -146,10 +154,13 @@ Actions:
 2. Define sections and slide jobs.
 3. Write assertion slide titles.
 4. Identify evidence, visual approach, and speaker intent for each slide.
+5. Complete slide detail for every slide in the outline, not only representative slides.
+6. Mark any slide with missing evidence, claims, or assets as `needs-input`.
 
 Exit Criteria:
 
 - The outline can be converted to `slides.json` without inventing new strategy.
+- Each slide has one job, a specific assertion title, evidence refs, and production notes when inputs are missing.
 
 ## Phase 8: Visual Direction
 
@@ -182,12 +193,15 @@ Actions:
 1. Convert deck outline to schema-compliant JSON.
 2. Add visual direction and production notes.
 3. Validate against `schemas/slides.schema.json`.
+4. Preserve evidence refs from the outline and do not replace them with broad artifact names when source IDs exist.
+5. Run a claim check: every slide title, key message, and content block must be supported by the outline or source artifacts.
 
 Exit Criteria:
 
 - JSON validates.
 - All slide IDs are unique.
 - Draft or missing items are marked clearly.
+- `needs-input` slides name the missing input in `production_notes`.
 
 ## Phase 10: Verification
 
@@ -204,10 +218,12 @@ Actions:
 3. Check consistency across outputs.
 4. Validate `slides.json`.
 5. Assign readiness decision.
+6. Block the package when any required artifact is missing, schema validation fails, core evidence is absent, or slides introduce unsupported claims.
 
 Exit Criteria:
 
 - No blockers remain, or the package is explicitly blocked.
+- Approval requires documented validation results, not an intention to validate later.
 
 ## Phase 11: Client Package Export
 

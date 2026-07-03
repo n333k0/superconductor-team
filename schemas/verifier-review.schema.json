@@ -44,12 +44,57 @@
             ]
           },
           "file": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "finding": {
-            "type": "string"
+            "type": "string",
+            "minLength": 10
           },
           "required_fix": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "validation_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "file",
+          "evidence_ref",
+          "result"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string",
+            "minLength": 10
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "caveat",
+              "fail"
+            ]
+          },
+          "notes": {
             "type": "string"
           }
         }

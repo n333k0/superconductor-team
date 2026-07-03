@@ -6,9 +6,9 @@ Benchmark owner:
 
 ## Comparison Set
 
-| Name | Type | Why Included | Evidence Ref |
-| --- | --- | --- | --- |
-|  | Direct |  |  |
+| Name | Type | Named Or Category | Why Included | Evidence Ref | Status |
+| --- | --- | --- | --- | --- | --- |
+|  | Direct | Named |  |  | needs-evidence |
 
 ## Summary
 
@@ -26,9 +26,15 @@ Credible whitespace:
 
 ## Benchmark Matrix
 
-| Competitor | Audience | Core Promise | Offer Model | Proof | Visual Language | Vulnerability |
-| --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |
+| Competitor | Audience | Core Promise | Offer Model | Proof | Buying Friction Move | Visual Language | Vulnerability | Client Opportunity | Evidence Ref |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |
+
+## Claim Audit
+
+| Claim Or Pattern | Who Uses It | Evidence Ref | Strength | Client-Safe Use |
+| --- | --- | --- | --- | --- |
+|  |  |  | weak / moderate / strong |  |
 
 ## Positioning Implications
 
@@ -39,3 +45,12 @@ Credible whitespace:
 ## Watchouts
 
 Claims that are weak, dated, or need verification:
+
+- 
+
+## Benchmark Completeness
+
+- Named direct competitors reviewed:
+- Indirect substitutes reviewed:
+- Status quo options reviewed:
+- Evidence gaps that block client-ready claims:

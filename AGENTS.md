@@ -35,6 +35,27 @@ Each strategic artifact should include:
 
 For research-heavy outputs, use source labels from `inputs/<client-slug>/source-log.md` rather than raw links in every paragraph.
 
+## Evidence Standard
+
+Use explicit evidence references whenever an artifact makes a strategic claim.
+
+- `SRC-###` refers to a row in `inputs/<client-slug>/source-log.md`.
+- `ASSUMPTION-###` refers to a named assumption in the same artifact.
+- `CLIENT-###` refers to a direct client statement or artifact excerpt captured in intake.
+- `outputs/<client-slug>/<artifact>.md#<section-anchor>` refers to a produced artifact section.
+
+Do not use broad references such as `research`, `benchmark`, `strategy synthesis`, or `client notes` when a specific source ID or section reference is available. If evidence is weak, say what would strengthen it and mark the affected recommendation as caveated or `needs-input`.
+
+## Minimum Quality Bar
+
+Weak outputs should be revised before handoff. Common rejection triggers:
+
+- Generic recommendations that would fit most agencies, SaaS firms, or service businesses.
+- Competitor benchmarks without named competitors, status quo options, source labels, and strategic vulnerabilities.
+- Deck outlines where slide titles are labels instead of assertions.
+- Slide JSON that adds claims not present in the deck outline or source artifacts.
+- Verifier reviews that approve work while leaving unresolved evidence, schema, consistency, or client-readiness blockers.
+
 ## Handoff Contract
 
 Every agent handoff must include:
