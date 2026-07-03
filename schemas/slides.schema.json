@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-discovery-os.local/schemas/slides.schema.json",
+  "title": "Agency Discovery OS Slides",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "client_slug",
+    "deck_title",
+    "version",
+    "created_at",
+    "source_outline",
+    "slides"
+  ],
+  "properties": {
+    "client_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "deck_title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "source_outline": {
+      "type": "string",
+      "pattern": "^outputs/[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*\\.md$"
+    },
+    "strategy_summary": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/slide"
+      }
+    }
+  },
+  "$defs": {
+    "slide": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "section",
+        "title",
+        "purpose",
+        "key_message",
+        "layout",
+        "content_blocks",
+        "evidence_refs",
+        "visual_direction",
+        "speaker_notes",
+        "production_notes",
+        "status",
+        "evidence_confidence",
+        "client_safe",
+        "readiness_gate"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^S[0-9]{2,3}$"
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 3,
+          "not": {
+            "pattern": "^(Overview|Insights|Approach|Recommendations|Next Steps|Appendix)$"
+          }
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 5
+        },
+        "key_message": {
+          "type": "string",
+          "minLength": 5
+        },
+        "layout": {
+          "type": "string",
+          "enum": [
+            "title",
+            "section-divider",
+            "single-message",
+            "two-column",
+            "three-column",
+            "evidence-table",
+            "matrix",
+            "timeline",
+            "process",
+            "quote",
+            "visual-system",
+            "appendix"
+          ]
+        },
+        "content_blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/content_block"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(SRC-[0-9]{3}|ASSUMPTION-[0-9]{3}|CLIENT-[0-9]{3}|outputs/[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*\\.md(?:#[a-z0-9]+(?:-[a-z0-9]+)*)?)$"
+          }
+        },
+        "visual_direction": {
+          "type": "string",
+          "minLength": 5
+        },
+        "speaker_notes": {
+          "type": "string"
+        },
+        "production_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "needs-input",
+            "ready-for-design",
+            "approved"
+          ]
+        },
+        "evidence_confidence": {
+          "type": "string",
+          "description": "Evidence basis for the slide: confirmed evidence, caveated external/vendor evidence, internal-only notes, assumption, or needing validation.",
+          "enum": [
+            "confirmed",
+            "external-sourced",
+            "internal-only",
+            "assumption",
+            "needs-validation"
+          ]
+        },
+        "client_safe": {
+          "type": "boolean",
+          "description": "True only when the slide can be shared externally with appropriate evidence and caveats."
+        },
+        "needs_input_reason": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Required when status is draft or needs-input; names the missing input, proof, decision, asset, or validation."
+        },
+        "readiness_gate": {
+          "type": "string",
+          "description": "Highest safe use gate for the individual slide.",
+          "enum": [
+            "demo-ready",
+            "internal-draft-ready",
+            "client-ready",
+            "blocked"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "draft",
+                  "needs-input"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "needs_input_reason"
+            ],
+            "properties": {
+              "production_notes": {
+                "minItems": 1
+              },
+              "client_safe": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "content_block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "heading",
+        "body"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "headline",
+            "paragraph",
+            "bullets",
+            "quote",
+            "metric",
+            "table",
+            "diagram-note",
+            "image-note"
+          ]
+        },
+        "heading": {
+          "type": "string"
+        },
+        "body": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
