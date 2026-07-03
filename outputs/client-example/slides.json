@@ -1,0 +1,46 @@
+{
+  "client_slug": "client-example",
+  "generated_at": "2026-07-03T00:00:00.000Z",
+  "verifier_readiness_summary": "Ready for internal agency review. Two claims still need client confirmation before external presentation.",
+  "slides": [
+    {
+      "id": "01",
+      "title": "Discovery Snapshot",
+      "readiness_gate": "review",
+      "evidence_confidence": "medium",
+      "client_safe": true,
+      "needs_input_reason": "",
+      "bullets": [
+        "The client has a clear service wedge but needs sharper proof points.",
+        "Messaging should prioritize outcome clarity over category education.",
+        "Sales enablement should focus on qualification friction and buyer confidence."
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Positioning Opportunity",
+      "readiness_gate": "ready",
+      "evidence_confidence": "high",
+      "client_safe": true,
+      "needs_input_reason": "",
+      "bullets": [
+        "Lead with the buyer's operational pain instead of internal product language.",
+        "Anchor differentiation in speed, implementation quality, and measurable handoff.",
+        "Use client-safe language that does not overstate market leadership."
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Open Inputs",
+      "readiness_gate": "draft",
+      "evidence_confidence": "low",
+      "client_safe": false,
+      "needs_input_reason": "Confirm revenue impact claims and obtain permission to reference named customer examples.",
+      "bullets": [
+        "Revenue lift needs direct client validation.",
+        "Named logos should remain internal until usage rights are confirmed.",
+        "Case study metrics should be replaced with ranges if exact values are sensitive."
+      ]
+    }
+  ]
+}
