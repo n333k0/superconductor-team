@@ -261,6 +261,72 @@ li + li {
   margin-top: 8px;
 }
 
+.content-blocks {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.content-block {
+  padding-top: 12px;
+  border-top: 1px solid rgba(174, 184, 197, 0.16);
+}
+
+.content-block h4 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.content-block p,
+.content-block ul {
+  margin-top: 0;
+  color: var(--soft);
+  line-height: 1.55;
+}
+
+.content-block p {
+  margin-bottom: 0;
+}
+
+.content-block ul {
+  margin-bottom: 0;
+}
+
+.mini-table {
+  display: grid;
+  gap: 8px;
+}
+
+.mini-table-row {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(174, 184, 197, 0.14);
+  border-radius: 6px;
+  background: rgba(23, 29, 37, 0.72);
+}
+
+.mini-table-row div {
+  display: grid;
+  gap: 2px;
+}
+
+.mini-table-row span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mini-table-row strong {
+  color: var(--soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .report-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

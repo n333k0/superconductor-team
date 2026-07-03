@@ -1,6 +1,6 @@
 # Strategy Synthesis
 
-Client slug: `client-example`
+Client slug: `smoke-test-003`
 Date: 2026-07-03
 Strategist: Strategy Synthesizer
 

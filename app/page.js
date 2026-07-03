@@ -101,15 +101,15 @@ function Badge({ label, value, tone = "neutral" }) {
 function confidenceTone(value) {
   const normalized = String(value || "").toLowerCase();
 
-  if (normalized === "high") {
+  if (normalized === "high" || normalized === "confirmed") {
     return "good";
   }
 
-  if (normalized === "medium") {
+  if (normalized === "medium" || normalized === "external-sourced" || normalized === "internal-only") {
     return "watch";
   }
 
-  if (normalized === "low") {
+  if (normalized === "low" || normalized === "assumption" || normalized === "needs-validation") {
     return "risk";
   }
 
@@ -123,11 +123,11 @@ function safeTone(value) {
 function readinessTone(value) {
   const normalized = String(value || "").toLowerCase();
 
-  if (["approved", "ready", "pass", "green"].includes(normalized)) {
+  if (["approved", "ready", "pass", "green", "client-ready"].includes(normalized)) {
     return "good";
   }
 
-  if (["review", "needs-review", "draft", "yellow"].includes(normalized)) {
+  if (["review", "needs-review", "draft", "yellow", "demo-ready", "internal-draft-ready"].includes(normalized)) {
     return "watch";
   }
 
@@ -143,6 +143,24 @@ function slideTitle(slide, index) {
 }
 
 function slideBody(slide) {
+  if (Array.isArray(slide.content_blocks)) {
+    return slide.content_blocks.flatMap((block) => {
+      if (Array.isArray(block.body)) {
+        return block.body.map((item) => {
+          if (item && typeof item === "object") {
+            return Object.entries(item)
+              .map(([key, value]) => `${key}: ${value}`)
+              .join(" | ");
+          }
+
+          return item;
+        });
+      }
+
+      return block.body ? [block.body] : [];
+    });
+  }
+
   if (Array.isArray(slide.bullets)) {
     return slide.bullets;
   }
@@ -156,6 +174,38 @@ function slideBody(slide) {
   }
 
   return [];
+}
+
+function ContentBlock({ block }) {
+  const body = block.body;
+
+  return (
+    <div className="content-block">
+      {block.heading ? <h4>{block.heading}</h4> : null}
+      {Array.isArray(body) && body.every((item) => item && typeof item === "object") ? (
+        <div className="mini-table">
+          {body.map((row, rowIndex) => (
+            <div className="mini-table-row" key={rowIndex}>
+              {Object.entries(row).map(([key, value]) => (
+                <div key={key}>
+                  <span>{key}</span>
+                  <strong>{valueLabel(value)}</strong>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      ) : Array.isArray(body) ? (
+        <ul>
+          {body.map((item, itemIndex) => (
+            <li key={itemIndex}>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>{body}</p>
+      )}
+    </div>
+  );
 }
 
 function MarkdownPanel({ title, content }) {
@@ -253,7 +303,13 @@ export default async function Page({ searchParams }) {
                       <p>{slide.needs_input_reason}</p>
                     </div>
                   ) : null}
-                  {slideBody(slide).length > 0 ? (
+                  {Array.isArray(slide.content_blocks) ? (
+                    <div className="content-blocks">
+                      {slide.content_blocks.map((block, blockIndex) => (
+                        <ContentBlock block={block} key={`${block.heading || block.type}-${blockIndex}`} />
+                      ))}
+                    </div>
+                  ) : slideBody(slide).length > 0 ? (
                     <ul>
                       {slideBody(slide).map((item, itemIndex) => (
                         <li key={itemIndex}>{item}</li>

@@ -1,0 +1,516 @@
+{
+  "client_slug": "aqualoop-hospitality",
+  "deck_title": "AquaLoop Hospitality Discovery Strategy",
+  "version": "0.1.0",
+  "created_at": "2026-07-03",
+  "source_outline": "outputs/aqualoop-hospitality/strategy-deck-outline.md",
+  "strategy_summary": "AquaLoop should treat hotels as a leading validation wedge for onsite greywater reuse, package the first offer as assessment-to-pilot, and block client-ready claims until property economics, engineering, regulatory, buyer, and naming evidence are validated.",
+  "slides": [
+    {
+      "id": "S01",
+      "section": "Opening",
+      "title": "AquaLoop should start as a hotel water-reuse validation wedge",
+      "purpose": "Introduce the recommended strategic direction.",
+      "key_message": "Hotels are the best current hypothesis, but the product should be positioned as a validation pathway before it is sold as proven infrastructure.",
+      "layout": "title",
+      "content_blocks": [
+        {
+          "type": "headline",
+          "heading": "Recommendation",
+          "body": "Lead with hospitality discovery: validate segment, architecture, code pathway, and property economics before making savings claims."
+        },
+        {
+          "type": "bullets",
+          "heading": "What this means now",
+          "body": [
+            "Hotels are a focused first wedge, not a proven market decision.",
+            "The first offer should create decision confidence.",
+            "Client-ready claims require measured proof."
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "CLIENT-001",
+        "outputs/aqualoop-hospitality/strategy-synthesis.md"
+      ],
+      "visual_direction": "Executive title slide with a hotel building, water-loop path, and proof-gate markers.",
+      "speaker_notes": "Open by making the recommendation clear while emphasizing that this is an early discovery package.",
+      "production_notes": [
+        "Final external brand naming requires legal review."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "needs_input_reason": "The strategic recommendation depends on unvalidated buyer, engineering, and property-economic inputs.",
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S02",
+      "section": "Opening",
+      "title": "The strongest current asset is a disciplined proof path, not a finished product claim",
+      "purpose": "Set the deck's evidence posture.",
+      "key_message": "AquaLoop can credibly frame what must be proven, but it cannot yet claim savings, ROI, compliance, or installability.",
+      "layout": "two-column",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Safe now",
+          "body": [
+            "Hotels are a plausible segment to investigate.",
+            "Onsite non-potable reuse is a recognized category.",
+            "Architecture, code, economics, and buyer ownership need validation."
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Blocked for client-ready export",
+          "body": [
+            "Quantified savings or payback.",
+            "Regulatory approval.",
+            "Specific treatment performance.",
+            "Plug-and-play installation."
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "CLIENT-001",
+        "ASSUMPTION-003",
+        "outputs/aqualoop-hospitality/verifier-review.md"
+      ],
+      "visual_direction": "Use a split evidence board with green safe claims and amber/red blocked claims.",
+      "speaker_notes": "Explain that this deck is useful because it protects the client from premature claims.",
+      "production_notes": [
+        "Keep caveats visible, not buried in notes."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "needs_input_reason": "This slide summarizes internal readiness rules and should be reviewed before external sharing.",
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S03",
+      "section": "Evidence",
+      "title": "Hotels are a credible first segment to investigate",
+      "purpose": "Establish why the hotel wedge is worth discovery investment.",
+      "key_message": "Public hotel water-efficiency context supports investigating hospitality because hotels have multiple recurring water-use areas.",
+      "layout": "process",
+      "content_blocks": [
+        {
+          "type": "diagram-note",
+          "heading": "Hotel water-use zones",
+          "body": "Guest rooms, restrooms, laundry, kitchens, landscaping, and mechanical systems create multiple places to investigate non-potable reuse fit."
+        },
+        {
+          "type": "paragraph",
+          "heading": "Strategic implication",
+          "body": "The segment is promising enough for focused validation, but public category context does not prove AquaLoop economics."
+        }
+      ],
+      "evidence_refs": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "visual_direction": "Hotel section diagram with labeled water-use zones and a callout that economics are unvalidated.",
+      "speaker_notes": "Use this slide to justify the hotel hypothesis without treating it as proven.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "external-sourced",
+      "client_safe": true,
+      "readiness_gate": "demo-ready"
+    },
+    {
+      "id": "S04",
+      "section": "Evidence",
+      "title": "Water reuse lives inside standards and code pathways",
+      "purpose": "Explain why compliance and certification must be part of the product strategy.",
+      "key_message": "Onsite reuse is a real category, but the launch market and applicable pathway determine what AquaLoop can safely claim.",
+      "layout": "process",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Evidence signals",
+          "body": [
+            "Onsite residential and commercial water reuse has formal standard categories.",
+            "Local examples show specific onsite reuse and greywater rules.",
+            "AquaLoop has no selected launch jurisdiction or certification path yet."
+          ]
+        },
+        {
+          "type": "diagram-note",
+          "heading": "Gate sequence",
+          "body": "Launch market -> allowed sources and uses -> treatment standard -> plumbing review -> monitoring plan -> claim approval."
+        }
+      ],
+      "evidence_refs": [
+        "SRC-003",
+        "SRC-004",
+        "SRC-013",
+        "SRC-014"
+      ],
+      "visual_direction": "Regulatory gate diagram with jurisdiction as the first gate.",
+      "speaker_notes": "Make clear that code pathway is not a footnote; it is part of the product.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "external-sourced",
+      "client_safe": true,
+      "readiness_gate": "demo-ready"
+    },
+    {
+      "id": "S05",
+      "section": "Evidence",
+      "title": "Competitors already occupy the generic greywater story",
+      "purpose": "Show why AquaLoop needs sharper positioning.",
+      "key_message": "Named vendors already use onsite reuse, greywater recycling, and shower recycling language, so AquaLoop should not rely on generic category claims.",
+      "layout": "matrix",
+      "content_blocks": [
+        {
+          "type": "table",
+          "heading": "Category landscape",
+          "body": [
+            {
+              "player": "Epic Cleantec",
+              "territory": "Building-scale onsite reuse / OneWater"
+            },
+            {
+              "player": "Hydraloop",
+              "territory": "Water recycling systems"
+            },
+            {
+              "player": "Greyter",
+              "territory": "Residential/commercial water reuse"
+            },
+            {
+              "player": "Orbital Systems",
+              "territory": "Shower water recycling"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "heading": "Implication",
+          "body": "The deck should differentiate on hospitality-specific validation, not unsupported superiority."
+        }
+      ],
+      "evidence_refs": [
+        "SRC-006",
+        "SRC-008",
+        "SRC-009",
+        "SRC-010",
+        "outputs/aqualoop-hospitality/competitor-benchmark.md"
+      ],
+      "visual_direction": "Use a plain competitor territory matrix with vendor-source caveats.",
+      "speaker_notes": "Use competitors as proof that the category exists and as warning against generic positioning.",
+      "production_notes": [
+        "Add dated screenshot captures before any formal client presentation."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "external-sourced",
+      "client_safe": true,
+      "readiness_gate": "demo-ready"
+    },
+    {
+      "id": "S06",
+      "section": "Evidence",
+      "title": "The AquaLoop name itself needs validation",
+      "purpose": "Flag brand and legal risk early.",
+      "key_message": "AQUALOOP appears in the greywater reuse market, so the project name should stay internal until legal review.",
+      "layout": "single-message",
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "heading": "Naming risk",
+          "body": "Use AquaLoop Hospitality as a working project label only; do not treat the name as cleared."
+        },
+        {
+          "type": "bullets",
+          "heading": "Decision needed",
+          "body": [
+            "Run legal/trademark review.",
+            "Decide whether to keep, modify, or replace the name.",
+            "Avoid external naming claims until reviewed."
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "SRC-015",
+        "ASSUMPTION-004"
+      ],
+      "visual_direction": "Brand risk card with a blocked readiness badge.",
+      "speaker_notes": "Treat this as a responsible early warning, not a legal conclusion.",
+      "production_notes": [
+        "Legal review required before external export."
+      ],
+      "status": "needs-input",
+      "evidence_confidence": "needs-validation",
+      "client_safe": false,
+      "needs_input_reason": "Legal/trademark review is missing for AquaLoop naming.",
+      "readiness_gate": "blocked"
+    },
+    {
+      "id": "S07",
+      "section": "Strategy",
+      "title": "The first offer should be assessment-to-pilot, not system sale",
+      "purpose": "Recommend a business model sequence appropriate to current evidence.",
+      "key_message": "A validation service ladder lets AquaLoop create value before the hardware/system is fully proven.",
+      "layout": "process",
+      "content_blocks": [
+        {
+          "type": "table",
+          "heading": "Offer ladder",
+          "body": [
+            {
+              "stage": "1",
+              "offer": "Water Reuse Opportunity Assessment",
+              "proof": "Water baseline and code screen"
+            },
+            {
+              "stage": "2",
+              "offer": "Hospitality Reuse Pilot Specification",
+              "proof": "Engineering and AHJ path"
+            },
+            {
+              "stage": "3",
+              "offer": "System / managed service",
+              "proof": "Pilot results and service model"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/aqualoop-hospitality/service-architecture.md",
+        "outputs/aqualoop-hospitality/strategy-synthesis.md"
+      ],
+      "visual_direction": "Three-step value ladder from assessment to pilot to system deployment.",
+      "speaker_notes": "Frame this as the practical route from idea to fundable/productizable proof.",
+      "production_notes": [
+        "Pricing and margin model are not available."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "assumption",
+      "client_safe": false,
+      "needs_input_reason": "The offer ladder is a strategic recommendation that needs buyer and economics validation.",
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S08",
+      "section": "Strategy",
+      "title": "Architecture should be selected property by property until engineering narrows the path",
+      "purpose": "Prevent premature commitment to one product architecture.",
+      "key_message": "Per-room, centralized, semi-centralized, and hybrid models have different operational risks, and none is proven yet.",
+      "layout": "matrix",
+      "content_blocks": [
+        {
+          "type": "table",
+          "heading": "Architecture options",
+          "body": [
+            {
+              "option": "Per-room modular",
+              "benefit": "Contained unit logic",
+              "risk": "Maintenance count and guest-room disruption"
+            },
+            {
+              "option": "Centralized",
+              "benefit": "Operational control",
+              "risk": "Plumbing retrofit and capex"
+            },
+            {
+              "option": "Semi-centralized",
+              "benefit": "Zone balance",
+              "risk": "Complexity across floors"
+            },
+            {
+              "option": "Hybrid",
+              "benefit": "Property fit",
+              "risk": "Harder to productize"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "ASSUMPTION-002",
+        "outputs/aqualoop-hospitality/service-architecture.md"
+      ],
+      "visual_direction": "Architecture option matrix with benefits, risks, and validation status.",
+      "speaker_notes": "Keep the recommendation disciplined: compare before choosing.",
+      "production_notes": [
+        "Engineering feasibility study required."
+      ],
+      "status": "needs-input",
+      "evidence_confidence": "needs-validation",
+      "client_safe": false,
+      "needs_input_reason": "Engineering feasibility, cost, installation, and maintenance evidence are missing.",
+      "readiness_gate": "blocked"
+    },
+    {
+      "id": "S09",
+      "section": "Strategy",
+      "title": "The buyer map is multi-stakeholder until interviews prove ownership",
+      "purpose": "Clarify likely decision makers without inventing a buyer.",
+      "key_message": "Owners, operators, sustainability leaders, facilities teams, and MEP advisors may all matter, but budget ownership is unvalidated.",
+      "layout": "three-column",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Economic owner",
+          "body": [
+            "Owner",
+            "Asset manager",
+            "Hospitality group leadership"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Operational owner",
+          "body": [
+            "Property engineering",
+            "Facilities",
+            "Operations"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Influencers",
+          "body": [
+            "Sustainability / ESG",
+            "MEP engineer",
+            "Developer or brand standards team"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "CLIENT-001",
+        "ASSUMPTION-003",
+        "outputs/aqualoop-hospitality/market-research-summary.md"
+      ],
+      "visual_direction": "Stakeholder map organized by economic, operational, and influence roles.",
+      "speaker_notes": "This is a hypothesis map for interviews, not a proven buying committee.",
+      "production_notes": [
+        "Buyer interviews required."
+      ],
+      "status": "needs-input",
+      "evidence_confidence": "needs-validation",
+      "client_safe": false,
+      "needs_input_reason": "No hotel buyer interviews or procurement evidence are available.",
+      "readiness_gate": "blocked"
+    },
+    {
+      "id": "S10",
+      "section": "Execution",
+      "title": "Client-ready claims require five proof gates",
+      "purpose": "Define the validation roadmap.",
+      "key_message": "AquaLoop needs property, regulatory, engineering, buyer, and pilot proof before client-ready export.",
+      "layout": "timeline",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Proof gates",
+          "body": [
+            "Property economics: water bills, demand, tariff, capex, opex.",
+            "Regulatory path: launch jurisdiction and AHJ/code review.",
+            "Engineering feasibility: architecture, treatment, installation, maintenance.",
+            "Buyer validation: budget owner, procurement, willingness to pay.",
+            "Pilot evidence: measured outcomes and operating reliability."
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/aqualoop-hospitality/strategy-synthesis.md",
+        "ASSUMPTION-003"
+      ],
+      "visual_direction": "Five-gate roadmap with blocked/current/future statuses.",
+      "speaker_notes": "Turn uncertainty into a practical workplan.",
+      "production_notes": [
+        "Add owners and dates once client chooses launch market and pilot path."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "needs_input_reason": "Proof gates are defined, but no validation workstream has been completed yet.",
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S11",
+      "section": "Execution",
+      "title": "Visual direction should make water infrastructure concrete, not generic eco",
+      "purpose": "Guide design production for the deck.",
+      "key_message": "The design system should use hotel infrastructure diagrams, proof badges, and readiness gates rather than abstract blue-water sustainability visuals.",
+      "layout": "visual-system",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Design principles",
+          "body": [
+            "Show the building as the system.",
+            "Make uncertainty visible and useful.",
+            "Separate public evidence, assumptions, and blocked claims."
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Avoid",
+          "body": [
+            "Generic water splashes.",
+            "Plug-and-play product visuals.",
+            "Luxury hotel photography that hides operational complexity."
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/aqualoop-hospitality/visual-direction.md"
+      ],
+      "visual_direction": "Mini visual system board with diagrams, badges, and restrained aqua/charcoal palette.",
+      "speaker_notes": "Use this to brief designers or preview production needs.",
+      "production_notes": [
+        "Actual licensed imagery and diagrams are still needed."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "needs_input_reason": "Visual assets are not produced or licensed yet.",
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S12",
+      "section": "Execution",
+      "title": "Package readiness is internal-draft-ready with client-ready blockers",
+      "purpose": "Close with the verifier decision and next inputs.",
+      "key_message": "The package is coherent and renderable, but client-ready export is blocked until core evidence gaps are resolved.",
+      "layout": "evidence-table",
+      "content_blocks": [
+        {
+          "type": "table",
+          "heading": "Readiness decision",
+          "body": [
+            {
+              "gate": "demo-ready",
+              "decision": "pass",
+              "reason": "Complete package and renderable deck"
+            },
+            {
+              "gate": "internal-draft-ready",
+              "decision": "pass",
+              "reason": "Useful for strategy and validation planning"
+            },
+            {
+              "gate": "client-ready",
+              "decision": "blocked",
+              "reason": "Missing buyer, property, regulatory, engineering, and legal proof"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/aqualoop-hospitality/verifier-review.md",
+        "outputs/aqualoop-hospitality/client-package-manifest.md"
+      ],
+      "visual_direction": "Readiness gate table with clear pass/blocked labels.",
+      "speaker_notes": "End by naming what the team can do next rather than pretending the strategy is finished.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "confirmed",
+      "client_safe": true,
+      "readiness_gate": "internal-draft-ready"
+    }
+  ]
+}

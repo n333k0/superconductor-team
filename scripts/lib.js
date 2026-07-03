@@ -4,10 +4,16 @@ const path = require("path");
 const rootDir = path.resolve(__dirname, "..");
 const outputsDir = path.join(rootDir, "outputs");
 const requiredClientFiles = [
-  "slides.json",
-  "strategy-synthesis.md",
+  "discovery-brief.md",
+  "market-research-summary.md",
   "competitor-benchmark.md",
-  "verifier-review.md"
+  "service-architecture.md",
+  "strategy-synthesis.md",
+  "strategy-deck-outline.md",
+  "visual-direction.md",
+  "slides.json",
+  "verifier-review.md",
+  "client-package-manifest.md"
 ];
 
 function slugFromArg() {
