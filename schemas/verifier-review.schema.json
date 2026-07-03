@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-discovery-os.local/schemas/verifier-review.schema.json",
+  "title": "Agency Discovery OS Verifier Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "client_slug",
+    "decision",
+    "findings"
+  ],
+  "properties": {
+    "client_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "approved-with-caveats",
+        "blocked"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "severity",
+          "file",
+          "finding",
+          "required_fix"
+        ],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "material",
+              "minor",
+              "polish"
+            ]
+          },
+          "file": {
+            "type": "string"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "required_fix": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
