@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agency-discovery-os.local/schemas/verifier-review.schema.json",
+  "title": "Agency Discovery OS Verifier Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "client_slug",
+    "decision",
+    "findings"
+  ],
+  "properties": {
+    "client_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "approved-with-caveats",
+        "blocked"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "severity",
+          "file",
+          "finding",
+          "required_fix"
+        ],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "material",
+              "minor",
+              "polish"
+            ]
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "finding": {
+            "type": "string",
+            "minLength": 10
+          },
+          "required_fix": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "validation_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "file",
+          "evidence_ref",
+          "result"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string",
+            "minLength": 10
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "caveat",
+              "fail"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
