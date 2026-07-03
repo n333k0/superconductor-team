@@ -1,0 +1,428 @@
+{
+  "client_slug": "smoke-test-003",
+  "deck_title": "Northstar Fieldworks Strategy Direction",
+  "version": "0.1.0",
+  "created_at": "2026-07-03",
+  "source_outline": "outputs/smoke-test-003/strategy-deck-outline.md",
+  "strategy_summary": "Northstar should compete on field execution confidence by helping enterprise operations leaders reduce coordination risk across distributed teams.",
+  "slides": [
+    {
+      "id": "S01",
+      "section": "Opening",
+      "title": "Northstar should compete on field execution confidence",
+      "purpose": "Introduce the recommended strategic direction.",
+      "key_message": "Northstar's strongest territory is confidence that field execution is visible, coordinated, and improving.",
+      "layout": "title",
+      "content_blocks": [
+        {
+          "type": "headline",
+          "heading": "Recommendation",
+          "body": "Shift from workflow tool language to field execution confidence."
+        },
+        {
+          "type": "bullets",
+          "heading": "What this unlocks",
+          "body": [
+            "A sharper executive conversation",
+            "A clearer offer architecture",
+            "A stronger proof agenda for enterprise sales"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/strategy-synthesis.md"
+      ],
+      "visual_direction": "Use a clean executive opener with a field-to-customer-to-executive operating system motif.",
+      "speaker_notes": "Open with the strategic choice leadership is being asked to approve.",
+      "production_notes": [
+        "Avoid product screenshots on the opener."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S02",
+      "section": "Opening",
+      "title": "The current story makes Northstar easier to compare than to choose",
+      "purpose": "Name the positioning problem.",
+      "key_message": "Feature-led workflow language pushes Northstar into a crowded comparison set.",
+      "layout": "two-column",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Current story risk",
+          "body": [
+            "Sounds like another workflow tool",
+            "Understates implementation value",
+            "Makes proof feel secondary"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Needed shift",
+          "body": [
+            "Lead with operational risk",
+            "Show adoption confidence",
+            "Tie field execution to customer commitments"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/discovery-brief.md",
+        "outputs/smoke-test-003/competitor-benchmark.md"
+      ],
+      "visual_direction": "Before/after contrast with restrained status colors.",
+      "speaker_notes": "Explain why clearer positioning is commercially necessary.",
+      "production_notes": [
+        "Category comparison remains caveated until named competitor source captures are complete."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "external-sourced",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S03",
+      "section": "Evidence",
+      "title": "Enterprise pain starts when field handoffs become customer problems",
+      "purpose": "Connect operational pain to buyer urgency.",
+      "key_message": "Missed updates and manual handoffs become visible when customers escalate and executives lose confidence.",
+      "layout": "process",
+      "content_blocks": [
+        {
+          "type": "diagram-note",
+          "heading": "Escalation path",
+          "body": "Field status gap -> dispatch workaround -> customer update missed -> escalation -> executive visibility problem."
+        }
+      ],
+      "evidence_refs": [
+        "SRC-002"
+      ],
+      "visual_direction": "Show a left-to-right handoff-to-escalation flow.",
+      "speaker_notes": "Make the pain concrete before introducing the solution.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S04",
+      "section": "Evidence",
+      "title": "The category overuses visibility and workflow claims",
+      "purpose": "Show why generic feature-led differentiation is weak.",
+      "key_message": "All-in-one, real-time visibility, and streamlined workflow claims are table stakes rather than distinction.",
+      "layout": "matrix",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Overused claims",
+          "body": [
+            "All-in-one platform",
+            "Real-time visibility",
+            "Streamlined workflows",
+            "Better productivity"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/competitor-benchmark.md"
+      ],
+      "visual_direction": "Use a claim cluster map that makes sameness visible.",
+      "speaker_notes": "Set up the need for a sharper strategic territory.",
+      "production_notes": [
+        "Replace sample category labels with sourced public competitor examples when audit is complete."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "external-sourced",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S05",
+      "section": "Evidence",
+      "title": "The status quo wins when change feels riskier than manual work",
+      "purpose": "Establish the status quo as a competitor.",
+      "key_message": "Manual coordination persists when buyers do not believe a new platform will be adopted cleanly.",
+      "layout": "single-message",
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "heading": "Status quo competitor",
+          "body": "The sales story must reduce perceived change risk, not only explain software capability."
+        }
+      ],
+      "evidence_refs": [
+        "SRC-002",
+        "outputs/smoke-test-003/competitor-benchmark.md"
+      ],
+      "visual_direction": "Use a risk balance diagram comparing manual pain against implementation risk.",
+      "speaker_notes": "Frame adoption assurance as a strategic necessity.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S06",
+      "section": "Strategy",
+      "title": "Execution confidence is a sharper strategic territory",
+      "purpose": "Present the recommended positioning decision.",
+      "key_message": "Execution confidence is more specific, more urgent, and more credible than a broad workflow platform claim.",
+      "layout": "two-column",
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "heading": "Position",
+          "body": "For enterprise operations leaders managing distributed field teams, Northstar creates confidence that field execution is visible, coordinated, and improving."
+        },
+        {
+          "type": "paragraph",
+          "heading": "Tradeoff",
+          "body": "Do not lead with the broadest field service platform story."
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/strategy-synthesis.md"
+      ],
+      "visual_direction": "Use a positioning box with for, against, promise, and proof zones.",
+      "speaker_notes": "Make the choice crisp enough to approve or challenge.",
+      "production_notes": [
+        "Final external wording requires client approval."
+      ],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S07",
+      "section": "Strategy",
+      "title": "The primary buyer is the executive accountable for regional consistency",
+      "purpose": "Clarify the audience priority.",
+      "key_message": "The strategy should prioritize operations executives while supporting customer experience and IT stakeholders.",
+      "layout": "three-column",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Primary",
+          "body": [
+            "Enterprise operations executives",
+            "Accountable for field execution and service reliability"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Secondary",
+          "body": [
+            "Customer experience leaders",
+            "IT stakeholders"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Needs input",
+          "body": [
+            "Vertical priority",
+            "Win-rate evidence"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/discovery-brief.md",
+        "outputs/smoke-test-003/strategy-synthesis.md"
+      ],
+      "visual_direction": "Use a buyer priority stack with clear primary and secondary roles.",
+      "speaker_notes": "Call out the missing vertical data rather than overclaiming.",
+      "production_notes": [
+        "Requires client vertical performance data."
+      ],
+      "status": "needs-input",
+      "evidence_confidence": "needs-validation",
+      "client_safe": false,
+      "needs_input_reason": "Client vertical priority and win-rate evidence are required before this audience claim is safe for external use.",
+      "readiness_gate": "blocked"
+    },
+    {
+      "id": "S08",
+      "section": "Strategy",
+      "title": "Three messaging pillars translate operations pain into proof",
+      "purpose": "Present message architecture.",
+      "key_message": "The messaging should move from risk visibility to adoptable workflows to regional proof.",
+      "layout": "three-column",
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "heading": "See the risk",
+          "body": "Reveal where field handoffs and updates break down."
+        },
+        {
+          "type": "paragraph",
+          "heading": "Launch adoptable workflows",
+          "body": "Turn implementation into an operating rhythm."
+        },
+        {
+          "type": "paragraph",
+          "heading": "Prove execution",
+          "body": "Use reporting to create executive confidence."
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/strategy-synthesis.md"
+      ],
+      "visual_direction": "Use a three-pillar framework with proof requirements beneath each pillar.",
+      "speaker_notes": "Show how the story becomes usable by sales and marketing.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S09",
+      "section": "Offer",
+      "title": "The offer should move from demo-led to decision-led",
+      "purpose": "Explain why offer architecture needs to change.",
+      "key_message": "A clearer buying path helps enterprise buyers understand what they are approving and how adoption risk is managed.",
+      "layout": "two-column",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Current risk",
+          "body": [
+            "Demo explains features",
+            "Implementation value is undernamed",
+            "Expansion path is unclear"
+          ]
+        },
+        {
+          "type": "bullets",
+          "heading": "Recommended model",
+          "body": [
+            "Assess coordination risk",
+            "Launch the operating workflows",
+            "Improve execution confidence"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/service-architecture.md"
+      ],
+      "visual_direction": "Show current-to-recommended architecture shift.",
+      "speaker_notes": "Tie packaging to buyer decision confidence.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S10",
+      "section": "Offer",
+      "title": "Assessment, launch, and optimization make adoption easier to buy",
+      "purpose": "Detail the recommended three-layer offer.",
+      "key_message": "The three-layer model clarifies entry, core deployment, and expansion support.",
+      "layout": "process",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Offer ladder",
+          "body": [
+            "Field Coordination Assessment",
+            "Northstar Operations Launch",
+            "Execution Confidence Program"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/service-architecture.md"
+      ],
+      "visual_direction": "Use a vertical offer ladder with buyer triggers and proof needs.",
+      "speaker_notes": "Make the model simple enough for sales adoption.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    },
+    {
+      "id": "S11",
+      "section": "Activation",
+      "title": "Proof should focus on reduced escalation risk and reporting effort",
+      "purpose": "Define proof requirements.",
+      "key_message": "The strongest proof will show operational change, not just platform usage.",
+      "layout": "timeline",
+      "content_blocks": [
+        {
+          "type": "bullets",
+          "heading": "Proof to build",
+          "body": [
+            "Escalation reduction",
+            "Customer update speed or completeness",
+            "Manual reporting reduction",
+            "Regional consistency improvement",
+            "Launch adoption milestones"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/market-research-summary.md",
+        "SRC-005"
+      ],
+      "visual_direction": "Use a proof roadmap from qualitative examples to quantified outcomes.",
+      "speaker_notes": "Be clear that quantified claims need client evidence.",
+      "production_notes": [
+        "Do not publish quantified claims until client data is verified."
+      ],
+      "status": "needs-input",
+      "evidence_confidence": "needs-validation",
+      "client_safe": false,
+      "needs_input_reason": "Customer proof metrics and permission to use them are required before proof claims are safe for external use.",
+      "readiness_gate": "blocked"
+    },
+    {
+      "id": "S12",
+      "section": "Activation",
+      "title": "The next sprint should validate vertical priority and proof assets",
+      "purpose": "Close with decisions and next actions.",
+      "key_message": "The strategy can move into production once vertical priority and proof assets are confirmed.",
+      "layout": "evidence-table",
+      "content_blocks": [
+        {
+          "type": "table",
+          "heading": "Next decisions",
+          "body": [
+            {
+              "decision": "Vertical priority",
+              "owner": "Client",
+              "impact": "Audience and sales targeting"
+            },
+            {
+              "decision": "Proof assets",
+              "owner": "Client",
+              "impact": "Claim strength and deck credibility"
+            },
+            {
+              "decision": "Offer naming",
+              "owner": "Agency and client",
+              "impact": "Sales adoption"
+            }
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "outputs/smoke-test-003/strategy-synthesis.md"
+      ],
+      "visual_direction": "Use a concise decision checklist.",
+      "speaker_notes": "End with a concrete path to production.",
+      "production_notes": [],
+      "status": "ready-for-design",
+      "evidence_confidence": "internal-only",
+      "client_safe": false,
+      "readiness_gate": "internal-draft-ready"
+    }
+  ]
+}
